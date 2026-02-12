@@ -1,3 +1,20 @@
+## Research Notes (Phase 1 – Differential Expression)
+
+This notebook establishes transcriptional differences between HBV and HCV-associated liver tumors using TCGA-LIHC RNA-seq data.
+
+Key outputs:
+- Differential expression table
+- Volcano plot visualization
+- Annotated significant genes
+
+This phase lays the foundation for downstream survival modeling and counterfactual risk estimation.
+
+
+
+====================================================================================================================================================================================================
+
+
+
 Counterfactual Viral Etiology Modeling
 
 Goal is to model how survival risk in liver cancer (LIHC) changes depending on viral status (HBV vs HCV), and eventually simulate counterfactual scenarios (what if viral status were different?).
