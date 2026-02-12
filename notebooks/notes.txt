@@ -1,0 +1,29 @@
+Counterfactual Viral Etiology Modeling
+
+Goal is to model how survival risk in liver cancer (LIHC) changes depending on viral status (HBV vs HCV), and eventually simulate counterfactual scenarios (what if viral status were different?).
+
+Data Given
+Clinical metadata (viral status, survival days)
+RNA-Seq gene expression (60,660 genes × ~400 patients)
+Focused on HBV (177) vs HCV (33) patients
+Final aligned dataset: 229 patients × 60,660 genes
+
+Current Setup
+Log-transformed gene counts
+Variance filtering (down to 49,455 genes)
+Standard scaling
+Ridge + Lasso regression to predict survival days
+
+Results were ass
+Ridge MAE ≈ 634 days, R² < 0
+Lasso MAE ≈ 720 days, R² < 0
+Lasso selected sparse gene set but poor predictive power
+
+Interpretation
+High dimensionality (p >> n) + small HCV sample likely causing overfitting and weak generalization.
+
+Next Steps
+Dimensionality reduction (PCA)
+Proper survival modeling (Cox PH)
+Viral-stratified survival curves
+Counterfactual simulation using learned survival model
